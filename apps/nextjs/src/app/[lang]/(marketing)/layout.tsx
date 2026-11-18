@@ -1,7 +1,5 @@
 import { Suspense } from "react";
 
-import { getCurrentUser } from "@saasfly/auth";
-
 import { ModalProvider } from "~/components/modal-provider";
 import { NavBar } from "~/components/navbar";
 import { SiteFooter } from "~/components/site-footer";
@@ -19,7 +17,7 @@ export default async function MarketingLayout({
   };
 }) {
   const dict = await getDictionary(lang);
-  const user = await getCurrentUser();
+  const user = undefined;
   return (
     <div className="flex min-h-screen flex-col">
       <Suspense fallback="...">
