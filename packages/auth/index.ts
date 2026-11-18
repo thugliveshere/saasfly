@@ -1,5 +1,3 @@
-import { getSessionUser } from "./clerk";
-
 export interface User {
   id: string;
   name?: string | null;
@@ -23,5 +21,5 @@ export const authOptions = {
 }
 
 export async function getCurrentUser() {
-  return await getSessionUser();
+  return undefined;
 }
