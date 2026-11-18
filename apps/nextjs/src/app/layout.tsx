@@ -1,4 +1,3 @@
-import { ClerkProvider } from "@clerk/nextjs";
 import { Inter as FontSans } from "next/font/google";
 import localFont from "next/font/local";
 
@@ -80,8 +79,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
-      <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
         <head />
         {/*<Suspense>*/}
         {/*  <PostHogPageview />*/}
@@ -105,7 +103,6 @@ export default function RootLayout({
             <TailwindIndicator />
           </ThemeProvider>
         </body>
-      </html>
-    </ClerkProvider>
+    </html>
   );
 }
