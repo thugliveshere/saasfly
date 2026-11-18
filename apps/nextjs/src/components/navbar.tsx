@@ -12,7 +12,6 @@ import { MainNav } from "./main-nav";
 import { LocaleChange } from "~/components/locale-change";
 import { GitHubStar } from "~/components/github-star";
 import { useSigninModal } from "~/hooks/use-signin-modal";
-import { UserAccountNav } from "./user-account-nav";
 
 import useScroll from "~/hooks/use-scroll";
 import type { MainNavItem } from "~/types";
@@ -94,14 +93,7 @@ export function NavBar({
             </Link>
           ) : null}
 
-          {user ? (
-            <UserAccountNav
-              user={user}
-              params={{ lang: `${lang}` }}
-              dict={dropdown}
-            />
-          ) : (
-            <Button
+          <Button
               className="px-3"
               variant="default"
               size="sm"
@@ -111,7 +103,6 @@ export function NavBar({
                 ? marketing.signup
                 : "Default Signup Text"}
             </Button>
-          )}
         </div>
       </div>
     </header>
